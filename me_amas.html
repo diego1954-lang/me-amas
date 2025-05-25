@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>¿Me amas?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #fff0f5;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            color: #ff1493;
+        }
+
+        .botones button {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #btn-si {
+            background-color: #32cd32;
+            color: white;
+        }
+
+        #btn-no {
+            background-color: #ff6347;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Me amas?</h1>
+        <div class="botones">
+            <button id="btn-si" onclick="aceptar()">Sí</button>
+            <button id="btn-no" onclick="rechazar()">No</button>
+        </div>
+    </div>
+
+    <script>
+        let siBtn = document.getElementById("btn-si");
+        let size = 1;
+
+        function aceptar() {
+            document.body.innerHTML = "<h1>¡Yo también te amo! ❤️</h1>";
+        }
+
+        function rechazar() {
+            size += 0.2;
+            siBtn.style.transform = `scale(${size})`;
+        }
+    </script>
+</body>
+</html>
